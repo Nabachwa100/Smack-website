@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Registration - SMACK</title>
+    <link rel="stylesheet" href="Smack.css">
+</head>
+<body>
+    <header>
+        <img src="SMACK BADGE.jpg" alt="SMACK Logo" class="logo">
+        <h1>St. Mary's College Kisubi</h1>
+        <p class="motto">"Duc In Altum" — Launch into the Deep</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html" class="active">Contact / Register</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Contact Us</h2>
+            <p><strong>Address:</strong> St. Mary's College Kisubi, P.O. Box 46, Kisubi, Wakiso District, Uganda</p>
+            <p><strong>Phone:</strong> +256 414 321 085</p>
+            <p><strong>Email:</strong> info@stmaryscollegekisubi.sc.ug</p>
+            <p><strong>Website:</strong> www.stmaryscollegekisubi.sc.ug</p>
+        </section>
+
+        <section>
+            <h2>Student Registration Form</h2>
+            <p>Fill in the form below to express interest in admission. <em>All fields marked with * are required.</em></p>
+
+            <form id="registrationForm" onsubmit="return validateForm(event)">
+
+                <label for="fullname">Student's Full Name *</label>
+                <input type="text" id="fullname" placeholder="e.g., John Mary Okello">
+                <p class="error" id="fullnameError"></p>
+
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob">
+                <p class="error" id="dobError"></p>
+
+                <label for="parent">Parent/Guardian Name *</label>
+                <input type="text" id="parent" placeholder="e.g., Peter Okello">
+                <p class="error" id="parentError"></p>
+
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" placeholder="e.g., +256 700 123456">
+                <p class="error" id="phoneError"></p>
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" placeholder="e.g., parent@example.com">
+                <p class="error" id="emailError"></p>
+
+                <label for="class">Applying for Class *</label>
+                <select id="class">
+                    <option value="">-- Select --</option>
+                    <option value="S1">Senior 1</option>
+                    <option value="S2">Senior 2</option>
+                    <option value="S3">Senior 3</option>
+                    <option value="S4">Senior 4</option>
+                    <option value="S5">Senior 5</option>
+                </select>
+                <p class="error" id="classError"></p>
+
+                <label for="message">Additional Message (Optional)</label>
+                <textarea id="message" rows="4" placeholder="Any questions or special requests..."></textarea>
+
+                <button type="submit">Submit Registration</button>
+            </form>
+
+            <p id="successMessage" style="color: green; font-weight: bold; display: none; margin-top: 20px;">
+                ✅ Registration submitted successfully! We will contact you soon.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 St. Mary's College Kisubi. All Rights Reserved.</p>
+        <p>Kisubi, Wakiso District | Tel: +256 414 321 085</p>
+    </footer>
+
+    <script src="Smack.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+smack-website/
+├── Home.html          (Home)
+├── about.html          (About)
+├── academics.html      (Academics/Programs)
+├── gallery.html        (Gallery)
+├── contact.html        (Contact/Registration)
+├── css/
+│   └── Smack.css       (All styling)
+├── js/
+│   └── Smack.js       (All JavaScript)
+└── images/             (To be collected)

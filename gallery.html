@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - SMACK</title>
+    <link rel="stylesheet" href="Smack.css">
+</head>
+<body>
+    <header>
+       <img src="SMACK BADGE.jpg" alt="This is image of SMACK Badge" class="logo">
+        <h1>St. Mary's College Kisubi</h1>
+        <p class="motto">"Duc In Altum" — Launch into the Deep</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="contact.html">Contact / Register</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Our School in Pictures</h2>
+            <p>Click on any image to enlarge it.</p>
+
+            <div class="gallery-grid" id="gallery">
+                <!-- these are pictures of different school structures -->
+                <img src="admin.jpg" alt="School Main Building" onclick="openLightbox(this)">
+                <img src="download.jpg" alt="Students in Class" onclick="openLightbox(this)">
+                <img src="sports.jpg" alt="Sports " onclick="openLightbox(this)">
+                <img src="library.jpg" alt="Library" onclick="openLightbox(this)">
+                <img src="chapel.jpg" alt="Chapel" onclick="openLightbox(this)">
+                <img src="lab.jpg" alt="Science Lab" onclick="openLightbox(this)">
+            </div>
+        </section>
+
+        <!-- Lightbox overlay -->
+        <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+            <span class="close">&times;</span>
+            <img src="" alt="Enlarged view" id="lightbox-img">
+        </div>
+
+        <section>
+            <h2>Video Highlights</h2>
+            <p><em>This is a tour video of our school</em>.</em></p>
+            <!-- video about the school -->
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oHo57TFitvQ?si=9N_OqaVSicHApO1G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+                
+            </iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 St. Mary's College Kisubi. All Rights Reserved.</p>
+        <p>Kisubi, Wakiso District | Tel: +256 414 321 085</p>
+    </footer>
+
+    <script src="Smack.js"></script>
+</body>
+</html>

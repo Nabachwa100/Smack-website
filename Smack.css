@@ -1,0 +1,289 @@
+/* ===== GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #0a2e5c, #1a4a8a);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #f0c040;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+header .motto {
+    font-style: italic;
+    color: #f0c040;
+    font-size: 1.1rem;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    background-color: #f0c040;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 25px;
+    color: #0a2e5c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #0a2e5c;
+    color: #f0c040;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    min-height: 60vh;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #0a2e5c;
+    border-bottom: 3px solid #f0c040;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #1a4a8a;
+    margin-bottom: 10px;
+}
+
+/* ===== HERO SECTION (HOME PAGE) ===== */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(10, 46, 92, 0.85), rgba(10, 46, 92, 0.85)),
+                url('../images/school-building.jpg') center/cover;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    color: #f0c040;
+    border: none;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ===== IMAGE GALLERY ===== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 2000;
+    text-align: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 5%;
+    border: 3px solid #f0c040;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+/* ===== TABLES ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #0a2e5c;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ===== FORMS ===== */
+form {
+    max-width: 600px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #0a2e5c;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #f0c040;
+    outline: none;
+}
+
+form button {
+    background-color: #0a2e5c;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #1a4a8a;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 3px;
+}
+
+input.error-border,
+select.error-border,
+textarea.error-border {
+    border-color: red;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #0a2e5c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
